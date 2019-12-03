@@ -37,6 +37,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:textSize="40sp"
+                    android:onClick="btnClk"
                     android:text="7"/>
 
                 <Button
