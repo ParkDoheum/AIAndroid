@@ -25,15 +25,40 @@ public class CalcActivity extends AppCompatActivity {
         Button btn = (Button)v;
         String bVal = btn.getText().toString();
 
-        if(bVal.equals("/") || bVal.equals("*") || bVal.equals("-") || bVal.equals("+")) {
-            calc = bVal;
-        } else if(calc.equals("")){
-            leftVal = leftVal + bVal;
+        if(bVal.equals("=")) {
+            int leftInt = Integer.parseInt(leftVal);
+            int rightInt = Integer.parseInt(rightVal);
+            double result = 0;
+            switch(calc) {
+                case "/":
+                    result = (double)leftInt / rightInt;
+                    break;
+                case "*":
+                    result = leftInt * rightInt;
+                    break;
+                case "-":
+                    result = leftInt - rightInt;
+                    break;
+                case "+":
+                    result = leftInt + rightInt;
+                    break;
+            }
+
+            String resStr = Double.toString(result);
+            et_input.setText(resStr);
         } else {
-            rightVal = rightVal + bVal;
+            if(bVal.equals("/") || bVal.equals("*") || bVal.equals("-") || bVal.equals("+")) {
+                calc = bVal;
+            } else if(calc.equals("")){
+                leftVal = leftVal + bVal;
+            } else {
+                rightVal = rightVal + bVal;
+            }
+
+            et_input.setText(leftVal + calc + rightVal);
         }
 
-        et_input.setText(leftVal + calc + rightVal);
+
 
     }
 
