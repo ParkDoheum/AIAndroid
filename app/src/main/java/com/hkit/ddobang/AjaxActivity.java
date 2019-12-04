@@ -27,7 +27,8 @@ public class AjaxActivity extends AppCompatActivity {
     private void init() {
         Retrofit retro = RetroFit2.getRetrofit();
         BoxOfficeService service = retro.create(BoxOfficeService.class);
-        service.getBoxOffice(RetroFit2.API_KEY, "20190608").enqueue(new Callback<Result>() {
+        service.getBoxOffice(RetroFit2.API_KEY, "20190608")
+                .enqueue(new Callback<Result>() {
             @Override
             public void onResponse(Call<Result> call, Response<Result> response) {
                 Log.i("test", "통신 Good!!!!!");
