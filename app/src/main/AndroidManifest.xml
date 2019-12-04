@@ -12,17 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Ajax2Activity">
+        <activity android:name=".Ajax3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AjaxActivity">
+        <activity android:name=".Ajax2Activity">
 
         </activity>
-        <activity android:name=".NavActivity"></activity>
+        <activity android:name=".AjaxActivity"></activity>
+        <activity android:name=".NavActivity" />
         <activity android:name=".CalcActivity" />
         <activity android:name=".MainActivity" />
     </application>
