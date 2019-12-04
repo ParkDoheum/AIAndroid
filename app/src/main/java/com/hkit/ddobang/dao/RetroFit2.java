@@ -10,7 +10,7 @@ public class RetroFit2 {
 
     public static Retrofit getRetrofit() {
         if(retrofit == null) {
-            final String BASE_URL = "http://www.kobis.or.kr";
+            final String BASE_URL = "https://www.kobis.or.kr";
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())

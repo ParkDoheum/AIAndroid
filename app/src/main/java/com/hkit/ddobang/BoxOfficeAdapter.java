@@ -5,19 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.hkit.ddobang.vo.WeeklyBoxOffice;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class BoxOfficeAdapter
         extends RecyclerView.Adapter<BoxOfficeAdapter.BoxOfficeViewHolder> {
 
-    List<WeeklyBoxOffice> weeklyBoxOfficeLists = new ArrayList<>();
+    List<WeeklyBoxOffice> weeklyBoxOfficeLists;
     Context context;
 
     public BoxOfficeAdapter(List<WeeklyBoxOffice> weeklyBoxOfficeLists, Context context) {
