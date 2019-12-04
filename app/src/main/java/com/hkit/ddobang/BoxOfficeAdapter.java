@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.hkit.ddobang.vo.WeeklyBoxOffice;
+
 import java.util.List;
 
 public class BoxOfficeAdapter
